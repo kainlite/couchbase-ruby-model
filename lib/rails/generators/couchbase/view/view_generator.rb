@@ -34,8 +34,8 @@ module Couchbase
       end
 
       def create_map_reduce_files
-        template 'map.js', File.join('app', 'models', model_name, view_name, 'map.js')
-        template 'reduce.js', File.join('app', 'models', model_name, view_name, 'reduce.js')
+        template 'map.js', File.join('app', 'models', model_name.downcase, view_name.downcase, 'map.js')
+        template 'reduce.js', File.join('app', 'models', model_name.downcase, view_name.downcase, 'reduce.js')
       end
 
     end
